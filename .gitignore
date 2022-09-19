@@ -1,4 +1,4 @@
 .env
-.prettier.json
+.prettierrc.json
 
 node_modules

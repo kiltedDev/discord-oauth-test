@@ -3,8 +3,6 @@ const passport = require('passport');
 const DiscordUser = require('../models/DiscordUser');
 
 passport.serializeUser((user, done) => {
-  console.log('serializing user');
-  console.log(user);
   done(null, user.id);
 });
 

@@ -7,6 +7,7 @@ const discordStrategy = require('./strategies/discordStrategy').Strategy;
 
 // ROUTES
 const authRoute = require('./routes/auth');
+const dashboardRoute = require('./routes/dashboard');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -31,6 +32,7 @@ app.use(passport.session());
 
 // Middleware Routes
 app.use('/auth', authRoute);
+app.use('/dashboard', dashboardRoute);
 
 app.listen(PORT, () =>
   console.log(`Now listening to requests on port ${PORT}`)
